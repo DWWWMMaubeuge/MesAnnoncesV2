@@ -26,6 +26,23 @@ function liker( $list_annonces )
 	return $list_annonces;
 }
 
+
+function noLiker( $list_annonces )
+{
+	if ( isset($_POST[ "noLiker" ]) )
+	{            
+		$IDAnnonce = $_GET[ "IDAnnonce" ];
+		//echo "<h1>$IDAnnonce<h1>\n";
+		$annonce_array = $list_annonces[ $IDAnnonce ];
+		$cptnoLike = $annonce_array[5];
+		$cptnoLike++;
+		$annonce_array[5] = $cptnoLike;
+		$list_annonces[ $IDAnnonce ] = $annonce_array; 
+	}
+	return $list_annonces;
+}
+
+
 function modifier( $cible )
 {
 	if ( isset($_POST[ "modif" ]) )

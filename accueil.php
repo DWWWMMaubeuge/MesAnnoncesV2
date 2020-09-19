@@ -21,6 +21,9 @@ gestionSession();
 $annonces = liker( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;
 
+$annonces = noLiker( $annonces );
+$_SESSION[ "annonces" ]  = $annonces;
+
 $annonces = supprimer( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;
 

@@ -55,8 +55,8 @@ function gestionSession()
 }
 // fin de gestion de la session
 
-if ( $__TEST )
-{
+//if ( $__TEST )
+//{
 
 	//echo "===================================================<br>\n";  
 	//echo "DEBUT section de test du fichier calculerLaSommeDuPanier<br>\n";  
@@ -65,7 +65,7 @@ if ( $__TEST )
 
 	//echo "FIN de section de test du fichier calculerLaSommeDuPanier<br>\n";  
 	//echo "====================================================<br>\n";  
-}
+//}
 
 
 ?>
