@@ -1,0 +1,36 @@
+git remote add origin https://github.com/DWWWMMaubeuge/MairieMaubeuge.git
+
+
+initialiser un repos depuis l'ordi
+
+	le repo doit exister sur GITHUB
+
+	git init
+	git add --all
+	git commit -m "premier commit"
+	git remote add origin https://github.com/YOU_NAME_GIT/YOUR_REPO.git
+	git remote -v
+	git push --set-upstream origin master
+	git push
+
+créer sa branche
+
+
+	git branch NAME
+	git checkout NAME
+
+	git push -u origin NAME
+
+
+pusher sa branche
+
+
+	git add --all
+	git commit -m "mesage..."
+	git push 
+
+
+
+	
+
+

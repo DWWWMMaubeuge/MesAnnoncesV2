@@ -1,5 +1,6 @@
 <?php
 $__TEST = false;
+$__URL_local = "/Maubeuge/MesAnnoncesV2";
 // modif
 
 include ( "MA_saisie_annonces.php" );
@@ -9,6 +10,16 @@ include ( "MA_gestion_vignette.php" );
 
 setHeaderNoCache();
 gestionSession();
+
+$annonces = liker( $annonces );
+$_SESSION[ "annonces" ]  = $annonces;
+
+$annonces = dislike( $annonces );
+$_SESSION[ "annonces" ]  = $annonces;
+
+$annonces = supprimer( $annonces );
+$_SESSION[ "annonces" ]  = $annonces;
+
 
 $IDAnnonce = $_GET[ "IDAnnonce" ];
 
@@ -21,6 +32,13 @@ $like   = $annonce[4];
 $dl     = $annonce[5];
 
 afficher_detail_annonce( $titre, $desc, $image, $prix, $like, $dl, "affiche_grand.php", $IDAnnonce );
+
+
+
+
+modifier( "modifier_annonce.php" );
+
+
 
 
 ?>

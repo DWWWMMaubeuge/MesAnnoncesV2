@@ -18,7 +18,13 @@ function setHeaderNoCache()
 	//echo "<link href=\"MA_CSS.css\" rel=\"stylesheet\">\n";
 	echo "<script>\n";
 	echo "function goAffGrand( id )\n";
-	echo "{ window.location.replace(\"http://localhost$__URL_local/affiche_grand.php?IDAnnonce=\"+id );}\n";
+	//echo "{ window.location.replace(\"http://localhost$__URL_local/affiche_grand.php?IDAnnonce=\"+id );}\n";
+	echo "{ window.location.href=\"http://localhost$__URL_local/affiche_grand.php?IDAnnonce=\"+id ;}\n";
+
+	echo "function goAccueil( )\n";
+	//echo "{ window.location.replace(\"http://localhost$__URL_local/affiche_grand.php?IDAnnonce=\"+id );}\n";
+	echo "{ window.location.href=\"http://localhost$__URL_local/accueil.php\" ;}\n";
+
 	echo "</script>\n";
 	echo "</head>\n";
 	echo "<body>\n";

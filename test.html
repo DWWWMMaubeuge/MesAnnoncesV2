@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link href="annonce.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="annonce_detail" onclick="goAffGrand(0)">
+    <h2 class="titre_detail">voiture</h2>
+    <img class="image_detail" src="https://sf1.viepratique.fr/wp-content/uploads/sites/9/2020/01/peugeot-208.jpeg" alt="">
+    <h3>0120041</h3>
+    <h4>24 j'aime</h4>
+    <h4>15 je n'aime pas</h4>
+    <div>
+        <form method="POST" action="affiche_grand.php?IDAnnonce=0" class="form">
+        <input type="submit" class="button" name="suppr" value="X">
+        <input type="submit" class="button" name="modif" value="M">
+        <input type="submit" class="button" name="liker" value="<3">
+        <input type="submit" class="button" name="dislike" value="Grr">
+        <input type="submit" class="button" name="back"  value="back" onclick="window.location.href='http://localhost:8080/MesAnnoncesV2/accueil.php' ;">        </form>
+        </div>
+       <div>
+        <p class="description_detail">fdgdfgf</p>
+    </div>
+</div>
+<h1>Aff Grand</h1>
