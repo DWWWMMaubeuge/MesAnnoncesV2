@@ -81,7 +81,6 @@ function afficher_vignette_annonce_grand( $titre, $description, $image, $prix, $
     echo "    <div>\n";
 
     echo "        <form method=\"POST\" action=\"$cible?IDAnnonce=$IDA\" class=\"form\">\n";
-    echo "        <input type=\"submit\" class=\"button\" name=\"suppr\" value=\"X\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"modif\" value=\"M\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"liker\" value=\"<3\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"hater\" value=\"Grr\">\n";

@@ -31,12 +31,12 @@ if ( $ret_annonce_array != NULL )
 
     $_SESSION[ "annonces" ]  = $annonces;
     
-    header("location: accueil.php");
+    header("location: affiche_grand?IDAnnonce=$IDAnnonce");
 }
 echo "<div class=\"container_detail\" >\n";
 echo    "<div class=\"annonce_detail2\">\n";
 echo        "<div class=\"vig2\">\n";
-                $cible= "modifier_annonce.php?IDAnnonce=$IDAnnonce";
+                $cible= "modifier_annonce_2.php?IDAnnonce=$IDAnnonce";
                 form_modifier_annonce( $cible, $IDAnnonce );
 echo        "</div>\n";
 echo    "</div>\n";
