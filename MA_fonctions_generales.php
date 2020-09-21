@@ -67,5 +67,21 @@ if ( $__TEST )
 	//echo "====================================================<br>\n";  
 }
 
+function affichageAnnonce($numCard)
+{
+	GLOBAL $vignettes;
+
+	$vignette = $vignettes[ $numCard ];
+	$tit = $vignette[0];
+	$par = $vignette[1];
+	$numCard++;
+
+	echo"<div class=\"col\">";
+        echo"<div class=\"card card$numCard\">";
+        	echo"<h5>$tit</h5>";
+        	echo"<p>$par</p>";          
+        echo"</div>";
+    echo"</div>";
+}
 
 ?>

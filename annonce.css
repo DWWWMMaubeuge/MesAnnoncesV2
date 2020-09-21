@@ -1,10 +1,10 @@
 .button{
 
     background-color:#1a1c20;
-    border-radius:5px;
+    border-radius:15px;
     display:inline-block;
     cursor:pointer;
-    color:blueviolet;
+    color:#fff;
     font-family:Arial;
     font-size:10px;
     padding:8px 20px;
