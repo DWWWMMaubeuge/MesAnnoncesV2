@@ -4,7 +4,7 @@
 //$__TEST = true;
 
 
-function setHeaderNoCache()
+function setHeaderNoCache($title)
 {
 	GLOBAL $__URL_local;
 	
@@ -25,6 +25,7 @@ function setHeaderNoCache()
 	echo "function goAffGrand( id )\n";
 	echo "{ window.location.replace(\"http://localhost/$__URL_local/affiche_grand.php?IDAnnonce=\"+id );}\n";
 	echo "</script>\n";
+	echo "<title>$title</title>\n";
 	echo "</head>\n";
 	echo "<body>\n";
 }
@@ -78,6 +79,7 @@ if ( $__TEST )
 	//echo "====================================================<br>\n";  
 }
 
+
 function NAVB()
 {
  echo "<nav>\n";
@@ -89,10 +91,10 @@ function NAVB()
 	 echo "</div>\n";
 	 
 		 echo "<ul>\n";
-			 echo "<li><a class=\"active\" href=\"accueil.php\">Home</a></li>\n";
-			 echo "<li><a href=\"#\">#</a></li>\n";
+			 echo "<li><a class=\"active\" href=\"Home.php\">Home</a></li>\n";
+			 echo "<li><a class=\"active\" href=\"accueil.php\">Annonces</a></li>\n";
 			 echo "<li><a href=\"ajouter_annonce.php\">New Annonce</a></li>\n";
-			 echo "<li><a href=\"accueil.php?logout=\"1\"\" >logout</a></li>\n";
+			 echo "<li><a href=\"logout.php\" >logout</a></li>\n";
 		 echo "</ul>\n";
 	 
  echo "</nav>\n";

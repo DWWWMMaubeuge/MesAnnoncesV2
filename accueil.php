@@ -9,7 +9,7 @@ include ( "MA_affichage_annonces.php" );
 include ( "MA_fonctions_generales.php" );
 include ( "MA_gestion_vignette.php" );
 
-setHeaderNoCache();
+setHeaderNoCache("Annonces");
 gestionSession();
 NAVB();
 
