@@ -9,5 +9,19 @@ include ( "MA_gestion_vignette.php" );
 
 setHeaderNoCache();
 gestionSession();
+
+$IDAnnonce = $_GET[ "IDAnnonce" ];
+
+$annonce  = $annonces[ $IDAnnonce ];
+$titre  = $annonce[0];
+$desc   = $annonce[1];
+$image  = $annonce[2];
+$prix   = $annonce[3];
+$like   = $annonce[4];
+$dl     = $annonce[5];
+
+afficher_detail_annonce( $titre, $desc, $image, $prix, $like, $dl, "affiche_grand.php", $IDAnnonce );
+
+
 ?>
 <h1>Aff Grand</h1>
