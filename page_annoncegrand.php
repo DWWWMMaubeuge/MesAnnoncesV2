@@ -6,10 +6,31 @@ include ( "MA_fonctions_generales.php" );
 include ( "MA_gestion_vignette.php" );
 
 
+
 setHeaderNoCache();
-echo "test";
 
 
+function affichage_annonce( $id)
+{
+    GLOBAL $annonces;
+
+    $annonce = $annonces[ $id ];
+    $titre   =  $annonce[0];
+    $desc    =  $annonce[1];
+    $image   =  $annonce[2];
+    $prix    =  $annonce[3]; 
+       
+}
+
+function saisi_annonce($cible)
+{ 
+    
+    echo "<h2>$titre :</h2>";
+    echo "<div><img src=\"$image\"/></div> ";
+    echo "<p>$desc</p>";
+    echo "<h3>$prix</h3>";
+}
+/*
 echo  "<article>";
 echo  "<div class=\"annonce\">\n";
 echo  "<div class=\"imageC\">\n";
@@ -26,7 +47,7 @@ echo  "</div>";
 echo  "</div>";
 echo  "</article>";
 
-
+*/
 
 
 

@@ -27,6 +27,8 @@ $_SESSION[ "annonces" ]  = $annonces;
 $annonces = supprimer( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;
 
+
+
 modifier( "modifier_annonce.php" );
 afficher_galerie( $annonces, "accueil.php" );
 
