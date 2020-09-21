@@ -17,7 +17,7 @@ function afficher_vignette_annonce( $titre, $description, $image, $prix, $lk, $d
     echo "        <input type=\"submit\" class=\"button\" name=\"suppr\" value=\"X\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"modif\" value=\"M\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"liker\" value=\"<3\">\n";
-    echo "        <input type=\"submit\" class=\"button\" name=\"hater\" value=\"Grr\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"disliker\" value=\"Grr\">\n";
     echo "    </form>\n";
     echo "    </div>\n";
             
@@ -77,19 +77,19 @@ function afficher_vignette_annonce_grand( $titre, $description, $image, $prix, $
     echo "    <img class=\"image_detail\" src=\"$image\" alt=\"\">\n";
     //echo "    </a>\n";
     echo "    <h3>$prix €</h3>\n";
+    echo "    <div>\n";
+    echo "        <p class=\"description_detail\">$description</p>\n";
+    echo "    </div>\n";
     echo "    <h4>$lk j'aime</h4>\n";
     echo "    <div>\n";
 
     echo "        <form method=\"POST\" action=\"$cible?IDAnnonce=$IDA\" class=\"form\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"modif\" value=\"M\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"liker\" value=\"<3\">\n";
-    echo "        <input type=\"submit\" class=\"button\" name=\"hater\" value=\"Grr\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"disliker\" value=\"Grr\">\n";
     echo "    </form>\n";
     echo "    </div>\n";
-            
-    echo "    <div>\n";
-    echo "        <p class=\"description_detail\">$description</p>\n";
-    echo "    </div>\n";
+        
     echo "</div>\n";
 }
 
