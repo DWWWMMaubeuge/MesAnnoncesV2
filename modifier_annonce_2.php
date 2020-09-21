@@ -5,7 +5,7 @@ include ( "MA_saisie_annonces.php" );
 include ( "MA_affichage_annonces.php" );
 include ( "MA_fonctions_generales.php" );
 
-setHeaderNoCache();
+setHeaderNoCache("Modifier annonce");
 gestionSession();
 NAVB();
 
