@@ -30,11 +30,18 @@ body{
         
 .container_vignettes
 {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #9c9c9c;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #9c9c9c;
 }
 
+.container_detail
+{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #9c9c9c;
+}
 
 .box1 {
     box-shadow: 1px 6px 17px ;
@@ -53,25 +60,46 @@ body{
 
 .annonce_vignette  
 {
-  background-color: #ca6716a2;
-  width: 200px;
-  margin: 10px;
-  margin-top: 90px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-
-.annonce_vignette2  
-{
     background-color: #ca6716a2;
-    width: 80%;
+    width: 200px;
     margin: 10px;
-    margin-top: 300px;
+    margin-top: 90px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+}
+
+.annonce_vignette:hover 
+{
+    background-color: #3d3d3da2;
+    width: 200px;
+    margin: 10px;
+    margin-top: 90px;
     text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.annonce_detail 
+{
+    background-color: #ca6716a2;
+    width: 80%;
+    margin: 180px;
+    margin-top: 0px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.annonce_detail2
+{
+    background-color: #ca6716a2;
+    width: 80%;
+    margin: 180px;
+    margin-top: 150px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
 }
 
 .vig2 {
@@ -82,22 +110,23 @@ body{
 
 .image_vignette
 {
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 
-.image_vignette2
+.image_detail
 {
-    width: 100%;
+    width: 80%;
     margin: auto;
 }
 
 .titre_vignette 
 {
     font-size: 22px;
+    text-align: center;
 } 
 
-.titre_vignette2 
+.titre_detail
 {
     font-size: 30px;
     text-align: center;
@@ -108,7 +137,7 @@ body{
     font-size: 14px;
 }
 
-.description_vignette2
+.description_detail
 {
     font-size: 22px;
     text-align: center;
@@ -120,7 +149,7 @@ nav{
     height: 80px;
     width: 100%;
     margin-left: -8px;
-    position: fixed;
+    position: top;
     z-index: 100;
 }
 

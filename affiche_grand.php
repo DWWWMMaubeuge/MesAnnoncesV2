@@ -19,9 +19,14 @@ $_SESSION[ "annonces" ]  = $annonces;
 $annonces = supprimer( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;
 
+modifier( "modifier_annonce_2.php" );
 
 
-$IDAnnonce = $GET["IDAnnonce"];
+
+
+
+
+$IDAnnonce = $_GET["IDAnnonce"];
 
 $annonce  = $annonces[ $IDAnnonce ];
 
@@ -30,17 +35,12 @@ $desc   = $annonce[1];
 $image  = $annonce[2];
 $prix   = $annonce[3];
 $like   = $annonce[4];
-$dl     = 0;
+$dl     = $annonce[5];
 
-afficher_vignette_annonce_grand( $titre, $desc, $image, $prix, $like, $dl, "affiche_grand.php", $IDAnnonce);
-
-echo "<div class=\"container_vignettes\" >\n";
-echo    "<div class=\"annonce_vignette2\">\n";
+echo "<div class=\"container_detail\" >\n";
 echo        "<div class=\"vig2\">\n";
-echo            "<h1>Aff Grand</h1>\n";
+afficher_vignette_annonce_grand( $titre, $desc, $image, $prix, $like, $dl, "affiche_grand.php", $IDAnnonce);
 echo        "</div>\n";
-echo    "</div>\n";
 echo "</div>\n";
-
 
 ?>

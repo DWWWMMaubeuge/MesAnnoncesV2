@@ -28,8 +28,8 @@ if ( $ret_annonce_array != NULL )
 
     header("location: accueil.php");
 }
-echo "<div class=\"container_vignettes\" >\n";
-echo    "<div class=\"annonce_vignette2\">\n";
+echo "<div class=\"container_detail \" >\n";
+echo    "<div class=\"annonce_detail \">\n";
 echo        "<div class=\"vig2\">\n";
                 $cible= "ajouter_annonce.php";
                 form_annonce( $cible );
