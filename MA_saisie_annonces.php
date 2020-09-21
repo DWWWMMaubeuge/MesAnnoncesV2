@@ -45,6 +45,7 @@ function form_modifier_annonce( $cible, $IDA )
     echo "    <input type=\"number\" name=\"prix\" value=\"$prix\">\n";
     echo "    <input type=\"text\" name=\"image\" value=\"$image\">\n";
     echo "    <textarea name=\"description\" row=\"10\">$desc</textarea>\n";
+    echo "    <input type=\"button\" value=\"back\" onclick=\"history.go(-1)\">\n";
     echo "    <input type='submit' name=\"envoi\" value=\"Envoyer\">\n";
     echo "</form>\n";
 }

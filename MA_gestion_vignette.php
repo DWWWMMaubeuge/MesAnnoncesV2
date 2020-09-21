@@ -26,6 +26,22 @@ function liker( $list_annonces )
 	return $list_annonces;
 }
 
+
+function dislike( $list_annonces )
+{
+	if ( isset($_POST[ "dislike" ]) )
+	{            
+		$IDAnnonce = $_GET[ "IDAnnonce" ];
+		//echo "<h1>$IDAnnonce<h1>\n";
+		$annonce_array = $list_annonces[ $IDAnnonce ];
+		$cptdisLike = $annonce_array[5];
+		$cptdisLike++;
+		$annonce_array[5] = $cptdisLike;
+		$list_annonces[ $IDAnnonce ] = $annonce_array; 
+	}
+	return $list_annonces;
+}
+
 function modifier( $cible )
 {
 	if ( isset($_POST[ "modif" ]) )

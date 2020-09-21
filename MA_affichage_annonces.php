@@ -11,13 +11,13 @@ function afficher_vignette_annonce( $titre, $description, $image, $prix, $lk, $d
     //echo "    </a>\n";
     echo "    <h3>$prix</h3>\n";
     echo "    <h4>$lk j'aime</h4>\n";
+    echo "    <h4>$dl je n'aime pas</h4>\n";
     echo "    <div>\n";
-
     echo "        <form method=\"POST\" action=\"$cible?IDAnnonce=$IDA\" class=\"form\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"suppr\" value=\"X\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"modif\" value=\"M\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"liker\" value=\"<3\">\n";
-    echo "        <input type=\"submit\" class=\"button\" name=\"hater\" value=\"Grr\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"dislike\" value=\"Grr\">\n";
     echo "    </form>\n";
     echo "    </div>\n";
             
@@ -31,6 +31,9 @@ function afficher_vignette_annonce( $titre, $description, $image, $prix, $lk, $d
 
 function afficher_detail_annonce( $titre, $description, $image, $prix, $lk, $dl, $cible, $IDA)
 {
+
+    GLOBAL $__URL_local;
+
     echo "<div class=\"annonce_detail\" onclick=\"goAffGrand($IDA)\">\n";
     echo "    <h2 class=\"titre_detail\">$titre</h2>\n";
     //echo "    <a href='affiche_grand.php?IDAnnonce=$IDA'>\n";
@@ -38,17 +41,18 @@ function afficher_detail_annonce( $titre, $description, $image, $prix, $lk, $dl,
     //echo "    </a>\n";
     echo "    <h3>$prix</h3>\n";
     echo "    <h4>$lk j'aime</h4>\n";
+    echo "    <h4>$dl je n'aime pas</h4>\n";
     echo "    <div>\n";
 
     echo "        <form method=\"POST\" action=\"$cible?IDAnnonce=$IDA\" class=\"form\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"suppr\" value=\"X\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"modif\" value=\"M\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"liker\" value=\"<3\">\n";
-    echo "        <input type=\"submit\" class=\"button\" name=\"hater\" value=\"Grr\">\n";
-    echo "    </form>\n";
-    echo "    </div>\n";
-            
-    echo "    <div>\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"dislike\" value=\"Grr\">\n";
+    echo "        <input type=\"button\" value=\"back\" onclick=\"window.location.href='\"."http://localhost/%22.$__URL_local.%22/accueil.php' ;">";;
+    echo "        </form>\n";
+    echo "        </div>\n";         
+    echo "       <div>\n";
     echo "        <p class=\"description_detail\">$description</p>\n";
     echo "    </div>\n";
     echo "</div>\n";
@@ -71,7 +75,7 @@ function afficher_galerie( $list_annonces, $cible )
             $image  = $annonce[2];
             $prix   = $annonce[3];
             $like   = $annonce[4];
-            $dl=0;
+            $dl     = $annonce[5];
             afficher_vignette_annonce( $titre, $desc, $image, $prix, $like, $dl, $cible, $numero );
         }
     echo "</div>\n";
@@ -91,7 +95,7 @@ if ( $__TEST )
    
     echo "<div class=\"container_vignettes\">";
         for( $i=0 ; $i < 20 ; $i++ )
-            afficher_vignette_annonce( "mon annonce", "voici un beau lieu de détente", "https://cdn.laredoute.com/products/680by680/4/3/7/43716f4ce8f9a20d91ae2ac686ad3ef5.jpg", "" ); 
+        afficher_vignette_annonce( "mon annonce", "voici un beau lieu de détente", "https://cdn.laredoute.com/products/680by680/4/3/7/43716f4ce8f9a20d91ae2ac686ad3ef5.jpg", "" ); 
 
     echo "</div>";
 

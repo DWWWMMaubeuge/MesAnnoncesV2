@@ -1,7 +1,7 @@
 <?php
 $__TEST = false;
 
-$__URL_local = "Maubeuge/MesAnnoncesV2";
+$__URL_local = ":8080/MesAnnoncesV2";
 // modif
 
 include ( "MA_saisie_annonces.php" );
@@ -19,16 +19,18 @@ gestionSession();
 // prix (3) 
 
 
-
 $annonces = liker( $annonces );
+$_SESSION[ "annonces" ]  = $annonces;
+
+$annonces = dislike( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;
 
 $annonces = supprimer( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;
 
+
 modifier( "modifier_annonce.php" );
 afficher_galerie( $annonces, "accueil.php" );
-
 
 
 ?><a href="ajouter_annonce.php">Ajouter une annonce</a><?php
