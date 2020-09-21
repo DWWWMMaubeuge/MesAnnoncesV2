@@ -6,6 +6,8 @@
 
 function setHeaderNoCache()
 {
+	GLOBAL $__URL_local;
+	
 	echo "<DOCTYPE html>\n";
 	echo "<html>\n";
 	echo "<head>\n";
@@ -14,6 +16,10 @@ function setHeaderNoCache()
 	echo "<meta http-equiv=\"Expires\" content=\"0\" />\n";
 	echo "<link href=\"annonce.css\" rel=\"stylesheet\">\n";
 	//echo "<link href=\"MA_CSS.css\" rel=\"stylesheet\">\n";
+	echo "<script>\n";
+	echo "function goAffGrand( id )\n";
+	echo "{ window.location.replace(\"http://localhost/$__URL_local/affiche_grand.php?IDAnnonce=\"+id );}\n";
+	echo "</script>\n";
 	echo "</head>\n";
 	echo "<body>\n";
 }

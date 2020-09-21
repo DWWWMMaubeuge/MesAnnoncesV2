@@ -1,5 +1,7 @@
 <?php
 $__TEST = false;
+
+$__URL_local = "Maubeuge/MesAnnoncesV2";
 // modif
 
 include ( "MA_saisie_annonces.php" );
