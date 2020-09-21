@@ -2,18 +2,22 @@
 //$__TEST = true;
 
 
-function afficher_vignette_annonce( $titre, $description, $image, $prix, $lk, $cible="")
+function afficher_vignette_annonce( $titre, $description, $image, $prix, $lk, $dl, $cible, $IDA)
 {
-    echo "<div class=\"annonce_vignette\" >\n";
+    echo "<div class=\"annonce_vignette\" onclick=\"goAffGrand($IDA)\">\n";
     echo "    <h2 class=\"titre_vignette\">$titre</h2>\n";
+    //echo "    <a href='affiche_grand.php?IDAnnonce=$IDA'>\n";
     echo "    <img class=\"image_vignette\" src=\"$image\" alt=\"\">\n";
+    //echo "    </a>\n";
     echo "    <h3>$prix</h3>\n";
     echo "    <h4>$lk j'aime</h4>\n";
     echo "    <div>\n";
-    echo "        <form method=\"POST\" action=\"$cible\" class=\"form\">\n";
+
+    echo "        <form method=\"POST\" action=\"$cible?IDAnnonce=$IDA\" class=\"form\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"suppr\" value=\"X\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"modif\" value=\"M\">\n";
     echo "        <input type=\"submit\" class=\"button\" name=\"liker\" value=\"<3\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"hater\" value=\"Grr\">\n";
     echo "    </form>\n";
     echo "    </div>\n";
             
@@ -38,7 +42,8 @@ function afficher_galerie( $list_annonces, $cible )
             $image  = $annonce[2];
             $prix   = $annonce[3];
             $like   = $annonce[4];
-            afficher_vignette_annonce( $titre, $desc, $image, $prix, $like, "$cible?IDAnnonce=$numero" );
+            $$dl=0;
+            afficher_vignette_annonce( $titre, $desc, $image, $prix, $like, $dl, $cible, $numero );
         }
     echo "</div>\n";
 }
