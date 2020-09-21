@@ -7,7 +7,7 @@ include ( "MA_fonctions_generales.php" );
 
 setHeaderNoCache();
 gestionSession();
-
+NAVB();
 // la fonction retourne un tableau dans lequel il y a :
 // titre (O) 
 // description (1) 
@@ -28,7 +28,12 @@ if ( $ret_annonce_array != NULL )
 
     header("location: accueil.php");
 }
-$cible= "ajouter_annonce.php";
-form_annonce( $cible );
-
+echo "<div class=\"container_vignettes\" >\n";
+echo    "<div class=\"annonce_vignette2\">\n";
+echo        "<div class=\"vig2\">\n";
+                $cible= "ajouter_annonce.php";
+                form_annonce( $cible );
+echo        "</div>\n";
+echo    "</div>\n";
+echo "</div>\n";
 ?>

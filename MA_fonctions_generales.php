@@ -16,6 +16,11 @@ function setHeaderNoCache()
 	echo "<meta http-equiv=\"Expires\" content=\"0\" />\n";
 	echo "<link href=\"annonce.css\" rel=\"stylesheet\">\n";
 	//echo "<link href=\"MA_CSS.css\" rel=\"stylesheet\">\n";
+	echo "<link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>\n";
+    echo "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n";
+    echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n";
+    echo "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>\n";
+    echo "<script src=\"https://kit.fontawesome.com/a076d05399.js\"></script>\n";
 	echo "<script>\n";
 	echo "function goAffGrand( id )\n";
 	echo "{ window.location.replace(\"http://localhost/$__URL_local/affiche_grand.php?IDAnnonce=\"+id );}\n";
@@ -73,5 +78,25 @@ if ( $__TEST )
 	//echo "====================================================<br>\n";  
 }
 
+function NAVB()
+{
+ echo "<nav>\n";
+ echo "<input type=\"checkbox\" id=\"check\">\n
+ <label for=\"check\" class=\"checkbtn\">\n
+   <i class=\"fas fa-bars\"></i></label>\n";
+	 echo "<div class=\"logo\">\n";
+		 echo "LeBonCoin du pauvre\n";
+	 echo "</div>\n";
+	 
+		 echo "<ul>\n";
+			 echo "<li><a class=\"active\" href=\"accueil.php\">Home</a></li>\n";
+			 echo "<li><a href=\"#\">#</a></li>\n";
+			 echo "<li><a href=\"ajouter_annonce.php\">New Annonce</a></li>\n";
+			 echo "<li><a href=\"accueil.php?logout=\"1\"\" >logout</a></li>\n";
+		 echo "</ul>\n";
+	 
+ echo "</nav>\n";
+
+};
 
 ?>

@@ -9,7 +9,7 @@ function afficher_vignette_annonce( $titre, $description, $image, $prix, $lk, $d
     //echo "    <a href='affiche_grand.php?IDAnnonce=$IDA'>\n";
     echo "    <img class=\"image_vignette\" src=\"$image\" alt=\"\">\n";
     //echo "    </a>\n";
-    echo "    <h3>$prix</h3>\n";
+    echo "    <h3>$prix €</h3>\n";
     echo "    <h4>$lk j'aime</h4>\n";
     echo "    <div>\n";
 
@@ -42,7 +42,7 @@ function afficher_galerie( $list_annonces, $cible )
             $image  = $annonce[2];
             $prix   = $annonce[3];
             $like   = $annonce[4];
-            $$dl=0;
+            $dl=0;
             afficher_vignette_annonce( $titre, $desc, $image, $prix, $like, $dl, $cible, $numero );
         }
     echo "</div>\n";
@@ -66,6 +66,32 @@ if ( $__TEST )
 
     echo "</div>";
 
+}
+
+
+function afficher_vignette_annonce_grand( $titre, $description, $image, $prix, $lk, $dl, $cible, $IDA)
+{
+    echo "<div class=\"annonce_vignette2\" onclick=\"goAffGrand($IDA)\">\n";
+    echo "    <h2 class=\"titre_vignette2\">$titre</h2>\n";
+    //echo "    <a href='affiche_grand.php?IDAnnonce=$IDA'>\n";
+    echo "    <img class=\"image_vignette2\" src=\"$image\" alt=\"\">\n";
+    //echo "    </a>\n";
+    echo "    <h3>$prix €</h3>\n";
+    echo "    <h4>$lk j'aime</h4>\n";
+    echo "    <div>\n";
+
+    echo "        <form method=\"POST\" action=\"$cible?IDAnnonce=$IDA\" class=\"form\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"suppr\" value=\"X\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"modif\" value=\"M\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"liker\" value=\"<3\">\n";
+    echo "        <input type=\"submit\" class=\"button\" name=\"hater\" value=\"Grr\">\n";
+    echo "    </form>\n";
+    echo "    </div>\n";
+            
+    echo "    <div>\n";
+    echo "        <p class=\"description_vignette2\">$description</p>\n";
+    echo "    </div>\n";
+    echo "</div>\n";
 }
 
 ?>
