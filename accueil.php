@@ -15,7 +15,8 @@ gestionSession();
 // description (1) 
 // image (2)
 // prix (3) 
-
+$annonces = hate( $annonces );
+$_SESSION[ "annonces" ]  = $annonces;
 
 
 $annonces = liker( $annonces );

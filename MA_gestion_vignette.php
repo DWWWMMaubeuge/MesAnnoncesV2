@@ -34,5 +34,26 @@ function modifier( $cible )
 		header( "location: $cible?IDAnnonce=$IDAnnonce");
 	}
 }
+function hate( $list_annonces )
+{
+	if ( isset($_POST[ "hate" ]) )
+	{            
+		$IDAnnonce = $_GET[ "IDAnnonce" ];
+		//echo "<h1>$IDAnnonce<h1>\n";
+		$annonce_array = $list_annonces[ $IDAnnonce ];
+		$cpthate = $annonce_array[5];
+		$cpthate++;
+		$annonce_array[5] = $cpthate;
+		$list_annonces[ $IDAnnonce ] = $annonce_array; 
+	}
+	return $list_annonces;
+}
+
+
+
+
+
+
+
 
 ?>

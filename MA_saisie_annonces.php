@@ -11,7 +11,7 @@ function saisie_annonce()
             $image = $_POST['image'];
             //echo "titre : $titre<br>\n";
 
-            return( [ $titre, $description, $image, $prix, 0 ]  );  
+            return( [ $titre, $description, $image, $prix, 0,0 ]  );  
         }
     return NULL;
 }
