@@ -25,7 +25,7 @@ $annonces = liker( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;
 
 $annonces = disliker( $annonces );
-$_SESSION[ "annonces" ]  = $annonces;
+$_SESSION[ "annonces" ]  = $annonces; 
 
 $annonces = supprimer( $annonces );
 $_SESSION[ "annonces" ]  = $annonces;

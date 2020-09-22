@@ -15,6 +15,7 @@ function setHeaderNoCache($title)
 	echo "<meta http-equiv=\"Pragma\" content=\"no-cache\" />\n";
 	echo "<meta http-equiv=\"Expires\" content=\"0\" />\n";
 	echo "<link href=\"annonce.css\" rel=\"stylesheet\">\n";
+	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css2.css\">\n";
 	//echo "<link href=\"MA_CSS.css\" rel=\"stylesheet\">\n";
 	echo "<link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>\n";
     echo "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n";
@@ -94,7 +95,8 @@ function NAVB()
 			 echo "<li><a class=\"active\" href=\"Home.php\">Home</a></li>\n";
 			 echo "<li><a class=\"active\" href=\"accueil.php\">Annonces</a></li>\n";
 			 echo "<li><a href=\"ajouter_annonce.php\">New Annonce</a></li>\n";
-			 echo "<li><a href=\"logout.php\" >logout</a></li>\n";
+			 echo "<li><a href=\"logout.php\">clear annonces</a></li>\n";
+			 echo "<li><a href=\"Home.php?logout=\"1\"\" >logout</a></li>\n";
 		 echo "</ul>\n";
 	 
  echo "</nav>\n";
